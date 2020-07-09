@@ -17,7 +17,6 @@ module.exports = {
             .then( response => {
                
                 let result = response.teamInfoCommon[0]
-                console.log(response)
                 message.channel.send(`
                 ${result.teamCity} ${result.teamName}\nSeason: ${result.seasonYear}\nW: ${result.w} - L ${result.l} ${result.pct}%\n${result.teamDivision} #${result.divRank}\n${result.teamConference} #${result.confRank}
                                       `);
