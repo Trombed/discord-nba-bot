@@ -11,7 +11,7 @@ module.exports = {
         }
         
 		const name = args.join(" ");
-		const team = NBA.teamIdFromName(name)
+		const team = NBA.teamIdFromName(name);
 
         NBA.stats.commonTeamRoster( {TeamID: team} )  
             .then( response => {
@@ -20,7 +20,7 @@ module.exports = {
                
                 let players = response.commonTeamRoster.map( player => {
                    return `${player.player} Age:${player.age} Height: ${player.height} Year: ${player.exp} Pos: ${player.position} Num: ${player.num} DOB: ${player.birthDate}`
-                })
+                });
                 
                 message.channel.send(players);
             })
